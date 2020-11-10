@@ -11,5 +11,5 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-// AI
+// AI OK
 reportWebVitals();
