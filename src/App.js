@@ -1,19 +1,28 @@
 import React from 'react';
 
-import './App.css';
-import Nav from './Components/Nav';
-import Tweet from './Components/Tweet';
 
-const name = 'Alireza'
-const App = ()=>{
-  return (
-    <div>
-      <h1>Hello React</h1>
-      <div className="home">
-        <Nav/>
-        <Tweet me={name}/>
-      </div>
-    </div>)
+
+import './App.css';
+
+class App extends React.Component{
+  constructor(){
+    super();
+    this.state = {name:'David'}
+  }
+  render(){
+    setTimeout(() => {
+      this.setState({name:"Bab"})
+    }, 1000);
+
+    return (
+        <div>
+          {this.state.name}
+        </div>
+    )
+  }
 }
+
+
+
 
 export default App;
